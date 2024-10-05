@@ -1,24 +1,15 @@
-const express =require("express");
+const express = require('express');
 
-// calling a function
 const app = express();
-
-// Middleware
 
 app.use(express.json());
 
-// Routes
-app.get('/',(req,res)=>{
-    res.send("hey man");
-} )
+app.get('/', (req, res) => {
+    res.send("google.com.np"); 
+});
 
+const port = 3002;
 
-
-
-
-
-
-const port = 3001
-app.listen(port,()=>{
-console.log('${port}')
-})
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`); 
+});
